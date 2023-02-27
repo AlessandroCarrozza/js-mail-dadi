@@ -6,13 +6,18 @@ const emailsList = ["pippopluto@gmail.com", "mariorossi@gmail.com", "marcobianch
 // chiedo all'utente la sua email
 const emailUser = prompt("Inserisci qui la tua email");
 
+
+// creo collegamento con il DOM
+const outcomeDom = document.getElementById("outcome");
+
+
 for (let i = 0; i < emailsList.length; i++) {
     
     if (emailUser == emailsList[i]) {
-        console.log("email corretta");
+        outcomeDom.innerHTML = `La tua Email "${emailUser}" è registrata, puoi accedere.`;
         break;
     } else if (i == (emailsList.length -1)) {
-        console.log("email errata");
+        outcomeDom.innerHTML = `La tua Email "${emailUser}" non è registrata.`;
     }
     
 }
