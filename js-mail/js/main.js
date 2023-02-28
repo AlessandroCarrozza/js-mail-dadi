@@ -10,14 +10,20 @@ const emailUser = prompt("Inserisci qui la tua email");
 // creo collegamento con il DOM
 const outcomeDom = document.getElementById("outcome");
 
+let possoPassare = false;
 
 for (let i = 0; i < emailsList.length; i++) {
     
-    if (emailUser == emailsList[i]) {
-        outcomeDom.innerHTML = `La tua Email "${emailUser}" è registrata, puoi accedere.`;
-        break;
-    } else if (i == (emailsList.length -1)) {
-        outcomeDom.innerHTML = `La tua Email "${emailUser}" non è registrata.`;
+    emailCorrente = emailsList[i];
+
+    if (emailCorrente == emailUser) {
+        possoPassare = true;
     }
     
+}
+
+if (possoPassare) {
+    console.log("puoi accedere");
+} else {
+    console.log("non puoi accedere");
 }
