@@ -13,13 +13,13 @@ const outcomeDom = document.getElementById("outcome");
 let possoPassare = false;
 
 for (let i = 0; i < emailsList.length; i++) {
-    
-    emailCorrente = emailsList[i];
+
+    const emailCorrente = emailsList[i];
 
     if (emailCorrente == emailUser) {
         possoPassare = true;
     }
-    
+
 }
 
 if (possoPassare) {

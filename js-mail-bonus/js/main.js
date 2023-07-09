@@ -11,9 +11,9 @@ const btnSendDom = document.getElementById("btn-send");
 
 
 // evento al click
-btnSendDom.addEventListener("click", 
-    
-    function() {
+btnSendDom.addEventListener("click",
+
+    function () {
 
         const emailUser = emailUserDom.value;
 
@@ -21,21 +21,20 @@ btnSendDom.addEventListener("click",
 
         for (let i = 0; i < emailsList.length; i++) {
 
-            const emailCorrente = emailsList[i];             
-            
+            const emailCorrente = emailsList[i];
+
             if (emailCorrente == emailUser) {
                 possoPassare = true;
             }
-            
+
         }
 
         if (possoPassare) {
-            outcomeDom.innerHTML += "Puoi accedere";
+            outcomeDom.innerHTML = "Puoi accedere";
         } else {
-            outcomeDom.innerHTML += "Non puoi accedere";
-        } 
-        
+            outcomeDom.innerHTML = "Non puoi accedere";
+        }
+
     })
 
 
-  
